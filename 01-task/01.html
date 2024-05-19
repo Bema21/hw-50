@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type = "text/babel">
+    const Movie = ({name, year, img}) => {
+        return (
+            <div className ="movie">
+                <img width="450" height="500" src={img} alt= {`Movie ${name}`}/>
+                <h1>{name}</h1>
+                <p>{year}</p>
+            </div>
+        );
+    };
+
+    const movie = (
+        <>
+            <Movie name ="Guy Ritchie's The Covenant" year ="2023" img="https://www.dvdsreleasedates.com/posters/800/T/The-Covenant-2023-movie-poster.jpg"/>
+        </>
+    );
+
+    ReactDOM.render(movie, document.getElementById("app"));
+
+</script>
+
+</body>
+</html>
