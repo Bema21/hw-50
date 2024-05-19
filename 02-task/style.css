@@ -1,0 +1,124 @@
+body{
+    background-color: #005eb8;
+    color: white;
+}
+
+header {
+    padding: 10px;
+    height: 80px;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    margin-left: 15px;
+}
+
+.head-list{
+    display: inline-flex;
+}
+
+.head-list li{
+    margin-left: 20px;
+}
+
+.head-list li:hover{
+    text-decoration: underline;
+}
+
+.head-list li:last-child{
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+li{
+    list-style: none;
+}
+
+.phone{
+    display: block;
+    padding: 5px 0 5px 25px;
+    background: url("https://img.icons8.com/sf-ultralight-filled/20/FFFFFF/phone.png") left center no-repeat;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding:100px 70px;
+    float: left;
+    border-right: 2px solid white;
+}
+
+p {
+    margin-left: 20px;
+    max-width: 500px;
+    font-size: 17px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    float: right;
+
+}
+
+.sidebar-list ul{
+    margin: 0;
+}
+
+nav{
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.sidebar-list li{
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.sidebar-list li:hover{
+    text-decoration: none;
+}
+
+h3{
+    display: block;
+    max-width: 270px;
+
+}
+
+button{
+    margin-top: 15px;
+    display: block;
+    padding: 7px 12px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #003CC5 0%, #0B63F6 51%, #003CC5 100%);
+}
+
+button:hover{
+    background-position: right center;
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    clear: both;
+}
