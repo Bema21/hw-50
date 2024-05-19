@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+
+    const Header = ({logo, link1, link2, link3, link4, link5, phone}) => {
+        return (
+            <header className="header">
+                <img width="100" src={logo} alt={`Logo ${name}`}/>
+                <ul className="head-list">
+                    <li><a href="02.html">{link1}</a></li>
+                    <li><a href="02.html">{link2}</a></li>
+                    <li><a href="02.html">{link3}</a></li>
+                    <li><a href="02.html">{link4}</a></li>
+                    <li><a href="02.html">{link5}</a></li>
+                </ul>
+                <a className="phone" href="02.html">{phone}</a>
+            </header>
+        );
+    };
+
+    const Content = ({img, text,}) => {
+        return (
+            <div className="content">
+                <img width="500" src={img} alt={`Photo ${name}`}/>
+                <p>{text}</p>
+            </div>
+        );
+    };
+
+    const Sidebar = ({title, item1, item2, item3, item4, item5, btn}) => {
+        return (
+            <aside className="sidebar">
+                <h3>{title}</h3>
+                <nav className="sidebar-list">
+                    <ul>
+                        <li><a href="02.html">{item1}</a></li>
+                        <li><a href="02.html">{item2}</a></li>
+                        <li><a href="02.html">{item3}</a></li>
+                        <li><a href="02.html">{item4}</a></li>
+                        <li><a href="02.html">{item5}</a></li>
+                        <button type="button">{btn}</button>
+                    </ul>
+                </nav>
+            </aside>
+        );
+    };
+    const Footer = ({address, logo}) => {
+        return (
+            <footer className="footer">
+                <img width="100" src={logo} alt={`Footer ${name}`}/>
+                <p>{address}</p>
+            </footer>
+        );
+    };
+
+    const page = (
+        <>
+            <Header  logo="https://pepsi.kg/icons/logo.svg"
+                     link1="Главная"
+                     link2="Новости"
+                     link3="Контакты"
+                     link4="Акции"
+                     link5="О компании" phone="3775">
+
+            </Header>
+            <Content   text="Компания PepsiCo — один из крупнейших в мире производителей продуктов питания и напитков под известными и любимыми брендами. В 2021 году выручка компании составила более 79 миллиардов долларов. PepsiCo стремится быть мировым лидером по производству готовых к употреблению продуктов питания и напитков, руководствуясь принципом «Побеждать с PepsiCo Positive». PepsiCo Positive (pep+) – это стратегическая трансформация, которая сделает устойчивое развитие приоритетом во всех бизнес-процессах компании и привнесёт позитивные изменения в жизни людей и планеты."
+                       img="https://www.pepsi.com/en-us/refresh082123/images/wild-cherry/15-20-52-13-v-4-16-x-9-tab-horz@2x.png">
+            </Content>
+            <Sidebar title="Соревнуйся за крутые призы от Pepsi!"  item1="Как участвовать"
+                     item2="Призы"
+                     item3="Победители"
+                     item4="Вопрос ответ"
+                     item5="Топ игроков"
+                     btn = "Учавствовать">
+            </Sidebar>
+            <Footer logo="https://pepsi.kg/icons/logo.svg"
+                    address="АО `Бишкексут`, Pepsico"/>
+        </>
+    );
+
+    ReactDOM.render(page, document.getElementById('app'));
+</script>
+</body>
+</html>
